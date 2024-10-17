@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/event.css" />
+    <script src="../JS/jquery-1.11.0.min.js"></script>
+    <script>
+      $(function () {
+        // $("#input").mousedown(function () {
+        //   $("#result").html("Mouse Down Event ~  !!!");
+        // });
+
+        // $("#input").mouseup(function () {
+        //   $("#result").html("Mouse Up Event !!!");
+        // });
+
+        // $("#input").mouseenter(function () {
+        //   $("#result").html("Mouse Enter Event (onmousevoer)");
+        // });
+
+        // 클릭 이벤트
+        // $("#input").click(function () {
+        //   $("#result").html("Click Event (mouse click)");
+        // });
+
+        // // 더블 클릭
+        // $("#input").dblclick(function () {
+        //   $("#result").html("Mouse Double Click Event (mouse double click)");
+        // });
+
+        $("#input").hover(
+          function () {
+            $("#result").html("Click Hover (mouse hover)");
+          },
+          function () {
+            $("#result").html("Mouse Leave Event (mouse leave)");
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <h1>마우스 이벤트</h1>
+    <div id="input">Do it in Here ~~ !!!</div>
+    <h2>결과</h2>
+    <div id="result"></div>
+  </body>
+</html>

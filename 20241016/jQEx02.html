@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="../JS/jquery-1.11.0.min.js"></script>
+    <style>
+      #container {
+        width: auto;
+        border: 5px solid #ff00ff;
+        padding: 10px;
+      }
+
+      #title,
+      .box {
+        background-color: burlywood;
+        padding: 10px;
+      }
+
+      .box {
+        font: 20px "궁서체";
+      }
+
+      ul {
+        list-style: none;
+        padding: 10px;
+        margin: 0px;
+        width: auto;
+        border: 5px solid greenyellow;
+      }
+
+      ul > li:first-child,
+      ul > li:last-child {
+        border: 3px dotted red;
+        padding: 3px 10px;
+      }
+
+      pre {
+        font: 14px/130% "Courier New";
+        background-color: #eee;
+        padding: 10px 20px;
+        margin: 10px auto;
+        border: 1px solid #555;
+        border-radius: 20px;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#title").html("두번째 제목");
+
+        $("#container > #title").html("제목입니다.");
+        $("#container .box").html("안녕하세요.");
+
+        $("ul li").html("목록 입니다.");
+
+        $("ul > li:eq(1)").html("JQuery");
+
+        $("p, pre").html("다중 요소 선택");
+
+        $("pre[name='source']").html("CSS 선택자");
+
+        $("ul > li:first-child").html("First-Child");
+        $("ul > li:last-child").html("Last-Child");
+      });
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="title"></h1>
+      <div class="box"></div>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <p></p>
+    <pre></pre>
+    <pre name="source"></pre>
+  </body>
+</html>

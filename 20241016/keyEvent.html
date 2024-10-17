@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/event.css" />
+    <script src="../JS/jquery-1.11.0.min.js"></script>
+    <script>
+      $(function () {
+        // 눌러진 횟수를 카운트 하기 위한 변수 선언
+        let down_count = 0;
+
+        // 떨어진 횟수를 카운트 하기 위한 변수 선언
+        let up_count = 0;
+
+        // 키보드의 키가 눌러진 경우 또는 누르고 있는 동안
+        $("#input > input[type='text']").keydown(function () {
+          // 횟수 증가
+          down_count++;
+          $("#result").html("down_count : " + down_count);
+        });
+
+        // 키보드의 키가 떨어진 경우
+        $("#input > input[type='text']").keyup(function () {});
+        up_count++;
+        $("#result").html("up_count : " + up_count);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Key 이벤트</h1>
+    <div id="input">
+      <input type="text" />
+    </div>
+    <h2>결과</h2>
+    <div id="result"></div>
+  </body>
+</html>

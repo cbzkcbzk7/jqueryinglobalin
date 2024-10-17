@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../JS/jquery-1.11.0.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function () {
+        $("#fade > input:eq(0)").click(function () {
+          $("#fade > div").fadeIn(500);
+        });
+
+        $("#fade > input:eq(1)").click(function () {
+          $("#fade > div").fadeOut(500);
+        });
+
+        $("#fade > input:eq(2)").click(function () {
+          $("#fade > div").fadeToggle(500);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>fadeIn/fadeOut</h1>
+    <div id="fade">
+      <input type="button" value="보이기" />
+      <input type="button" value="숨기기" />
+      <input type="button" value="토글" />
+      <div>
+        <img src="../img/2.jpg" alt="" width="300px" height="300px" />
+      </div>
+    </div>
+  </body>
+</html>

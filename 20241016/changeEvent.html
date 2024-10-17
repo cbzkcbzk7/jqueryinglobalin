@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/event.css" />
+    <script src="../JS/jquery-1.11.0.min.js"></script>
+    <script>
+      $(function () {
+        // 텍스트 박스의 입력값 변경 상태 감지
+        $("input[name='user_name']").change(function () {
+          $("#result").html("이름값이 변경 되었습니다.");
+        });
+
+        $("input[name='gender']").change(function () {
+          $("#result").html("성별 값이 변경되었습니다.");
+        });
+
+        $("select[name='job']").change(function () {
+          $("#result").html("직업이 변경되었습니다.");
+        });
+
+        $("input[name='hobby']").change(function () {
+          $("#result").html("취미가 변경되었습니다.");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Change Event</h1>
+
+    <div id="input">
+      <h3 for="">이름</h3>
+      <input type="text" name="user_name" />
+
+      <h3 for="">성별</h3>
+      <label for=""><input type="radio" name="gender" value="M" />남자</label>
+      <label for=""><input type="radio" name="gender" value="F" />여자</label>
+
+      <h3 for="">직업</h3>
+      <select name="job">
+        <option>---- 직업을 선택하세요. -----</option>
+        <option value="dev">프로그래머</option>
+        <option value="pub">퍼블리셔</option>
+      </select>
+
+      <h3 for="">취미</h3>
+      <label for=""
+        ><input type="checkbox" value="축구" name="hobby" />축구</label
+      >
+      <label for=""
+        ><input type="checkbox" value="농구" name="hobby" />농구</label
+      >
+      <label for=""
+        ><input type="checkbox" value="야구" name="hobby" />야구</label
+      >
+    </div>
+    <h2>결과</h2>
+    <div id="result"></div>
+  </body>
+</html>

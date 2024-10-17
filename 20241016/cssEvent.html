@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        margin: 10px auto;
+        border: 5px solid #ccc;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .box2 {
+        margin: 10px auto;
+        border: 10px solid #ff00ff;
+        padding: 25px;
+        text-align: left;
+        background-color: #ff0;
+      }
+    </style>
+    <script src="../JS/jquery-1.11.0.min.js"></script>
+    <script>
+      $(function () {
+        $("#btn1").click(function () {
+          $("#box").css("color", "red");
+        });
+
+        $("#btn2").click(function () {
+          $("#box").css("color", "green");
+        });
+
+        $("#btn3").click(function () {
+          $("#box").css("color", "blue");
+        });
+
+        $("#btn4").click(function () {
+          $("#box").css("background-color", "red");
+        });
+
+        $("#btn5").click(function () {
+          $("#box").css("background-color", "green");
+        });
+
+        $("#btn6").click(function () {
+          $("#box").css("background-color", "blue");
+        });
+
+        $("#btn7").click(function () {
+          $("#box").css("width", "50%");
+        });
+
+        $("#btn8").click(function () {
+          $("#box").css("width", "auto");
+        });
+
+        $("#btn9").click(function () {
+          $("#box").css("border", "10px solid pink");
+        });
+
+        $("#btn10").click(function () {
+          $("#box").css("border", "10px dotted yellowgreen");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>CSS 제어</h1>
+    <div id="box" class="box1">
+      <h1>테스트 영역</h1>
+    </div>
+    <input type="button" value="(폰트) red" id="btn1" /><input
+      type="button"
+      value="(폰트) green"
+      id="btn2"
+    /><input type="button" value="(폰트) blue" id="btn3" /><input
+      type="button"
+      value="(배경) red"
+      id="btn4"
+    />
+    <input type="button" value="(배경) green" id="btn5" />
+    <input type="button" value="(배경) blue" id="btn6" /><input
+      type="button"
+      value="width=50%"
+      id="btn7"
+    />
+    <input type="button" value="width=auto" id="btn8" /><input
+      type="button"
+      value="box1 클래스 적용"
+      id="btn9"
+    /><input type="button" value="box2 클래스 적용" id="btn10" />
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="../JS/jquery-1.11.0.min.js"></script>
+    <style>
+      /* * {
+      } */
+
+      #container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: large;
+        border-left: 10px solid green;
+        border-bottom: 1px solid green;
+        padding: 10px;
+        width: auto;
+      }
+
+      #comment_write {
+        padding: 20px 15px;
+        border-bottom: 1px solid green;
+      }
+
+      #comment_write_label {
+        display: inline;
+        width: 80px;
+        font-size: 14px;
+        font-weight: bold;
+        border-bottom: 10px;
+      }
+
+      #comment_write input[type="text"],
+      #comment_write textarea {
+        border: 1px solid gray;
+      }
+
+      #comment_write textarea {
+        width: 380px;
+        height: 90px;
+      }
+
+      #comment_item .writer {
+        color: black;
+        line-height: 40px;
+      }
+
+      #comment_item .writer input {
+        vertical-align: middle;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>JQUERY</h1>
+      <div id="comment_write">
+        <form action="" id="comment_form">
+          <div>
+            <label for="user_name">작성자</label>
+            <input type="text" name="user_id" id="user_id" />
+            <input type="submit" value="저장하기" />
+          </div>
+          <div>
+            <label for="comment">댓글내용</label>
+            <textarea name="comment" id="comment"></textarea>
+          </div>
+        </form>
+      </div>
+      <ul id="comment_list"></ul>
+    </div>
+  </body>
+</html>

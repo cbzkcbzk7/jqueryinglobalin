@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="../JS/jquery-1.11.0.min.js"></script>
+    <style>
+      #box {
+        background-color: rgb(23, 153, 23);
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        left: 0;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("button:eq(0)").click(function () {
+          $("#animation-area").html("<div id='box'></div>");
+        });
+        // 좌측으로 250px 이동
+        $("button:eq(1)").click(function () {
+          $("#box").animate(
+            {
+              left: "250px",
+            },
+            1000,
+            "swing",
+            function () {
+              alert("애니메이션이 종료되었습니다.");
+            }
+          );
+        });
+
+        // 좌측으로 250px 이동, 높이와 넓이를 150으로 변경하시오
+        $("button:eq(2)").click(function () {
+          $("div").animate({
+            left: "250px",
+            height: "150px",
+            width: "150",
+          });
+        });
+
+        // 좌측으로 250px 이동, 높이와 넓이를 150으로 누적 변경
+        $("button:eq(3)").click(function () {
+          $("div").animate({
+            left: "+=250px",
+            height: "+=150px",
+            width: "+=150",
+          });
+        });
+
+        // 좌측으로 250px 이동, 높이와 넓이를 150으로 변경하시오
+        $("button:eq(4)").click(function () {
+          $("div").animate(
+            {
+              height: "300px",
+            },
+            1000
+          ),
+            $("div").animate(
+              {
+                width: "300px",
+              },
+              1000
+            ),
+            $("div").animate(
+              {
+                height: "100px",
+              },
+              800
+            ),
+            $("div").animate(
+              {
+                width: "100px",
+              },
+              300
+            );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Animate</h1>
+    <button>Reset</button>
+    <button>Ani1</button>
+    <button>Ani2</button>
+    <button>Ani3</button>
+    <button>Ani4</button>
+    <div id="animation-area">
+      <div id="box"></div>
+    </div>
+  </body>
+</html>
